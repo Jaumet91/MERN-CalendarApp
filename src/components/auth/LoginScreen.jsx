@@ -17,8 +17,8 @@ export const LoginScreen = () => {
   const [formRegisterValues, handleRegisterInputChange] = useForm({
     rName: '',
     rEmail: '',
-    rPassword2: '',
     rPassword1: '',
+    rPassword2: '',
   });
 
   const { lEmail, lPassword } = formLoginValues;
@@ -62,6 +62,7 @@ export const LoginScreen = () => {
                 placeholder='Contraseña'
                 name='lPassword'
                 value={lPassword}
+                autoComplete='off'
                 onChange={handleLoginInputChange}
               />
             </div>
@@ -101,6 +102,7 @@ export const LoginScreen = () => {
                 placeholder='Contraseña'
                 name='rPassword1'
                 value={rPassword1}
+                autoComplete='off'
                 onChange={handleRegisterInputChange}
               />
             </div>
@@ -110,8 +112,9 @@ export const LoginScreen = () => {
                 type='password'
                 className='form-control'
                 placeholder='Repita la contraseña'
-                name='rPassword1'
+                name='rPassword2'
                 value={rPassword2}
+                autoComplete='off'
                 onChange={handleRegisterInputChange}
               />
             </div>
