@@ -94,7 +94,7 @@ export const CalendarModal = () => {
       return Swal.fire(
         'Error',
         'La fecha fin debe de ser mayor a la fecha de inicio',
-        'error'
+        'error',
       );
     }
 
@@ -107,14 +107,14 @@ export const CalendarModal = () => {
     } else {
       dispatch(
         eventStartAddNew(
-          formValues
+          formValues,
           // id y name se obtendran del backend
           // id: new Date().getTime(),
           // user: {
           //   _id: '123',
           //   name: 'Pedro',
           // },
-        )
+        ),
       );
     }
 
@@ -129,25 +129,25 @@ export const CalendarModal = () => {
       onRequestClose={closeModal}
       style={customStyles}
       closeTimeoutMS={200}
-      className='modal'
-      overlayClassName='modal-fondo'
+      className="modal"
+      overlayClassName="modal-fondo"
     >
-      <h1> {activeEvent ? 'Editar evento' : 'Nuevo evento'} </h1>
+      <h1> {activeEvent ? 'Edit Event' : 'New Event'} </h1>
       <hr />
-      <form className='container' onSubmit={handleSubmitForm}>
-        <div className='form-group mb-2'>
-          <label>Fecha y hora inicio</label>
+      <form className="container" onSubmit={handleSubmitForm}>
+        <div className="form-group mb-2">
+          <label>Start Date</label>
           <DateTimePicker
-            className='form-control'
+            className="form-control"
             onChange={handleStartDataChange}
             value={dateStart}
           />
         </div>
 
-        <div className='form-group mb-2'>
-          <label>Fecha y hora fin</label>
+        <div className="form-group mb-2">
+          <label>End Date</label>
           <DateTimePicker
-            className='form-control'
+            className="form-control"
             onChange={handleEndDataChange}
             value={dateEnd}
             minDate={dateStart}
@@ -155,40 +155,40 @@ export const CalendarModal = () => {
         </div>
 
         <hr />
-        <div className='form-group mb-2'>
-          <label>Titulo y notas</label>
+        <div className="form-group mb-2">
+          <label>Title and Notes</label>
           <input
-            type='text'
+            type="text"
             className={`form-control mt-2 mb-2 ${!titleValid && 'is-invalid'}`}
-            placeholder='Título del evento'
-            name='title'
-            autoComplete='off'
+            placeholder="Description"
+            name="title"
+            autoComplete="off"
             value={title}
             onChange={handleInputChange}
           />
-          <small id='emailHelp' className='form-text text-muted'>
-            Una descripción corta
+          <small id="emailHelp" className="form-text text-muted">
+            Short description
           </small>
         </div>
 
-        <div className='form-group mb-2'>
+        <div className="form-group mb-2">
           <textarea
-            type='text'
-            className='form-control mt-2 mb-2'
-            placeholder='Notas'
-            rows='5'
-            name='notes'
+            type="text"
+            className="form-control mt-2 mb-2"
+            placeholder="Notes"
+            rows="5"
+            name="notes"
             value={notes}
             onChange={handleInputChange}
           ></textarea>
-          <small id='emailHelp' className='form-text text-muted'>
-            Información adicional
+          <small id="emailHelp" className="form-text text-muted">
+            Aditional information
           </small>
         </div>
 
-        <div className='d-grid'>
-          <button type='submit' className='btn btn-outline-primary'>
-            <i className='far fa-save'></i>
+        <div className="d-grid">
+          <button type="submit" className="btn btn-outline-primary">
+            <i className="far fa-save"></i>
             <span> Guardar</span>
           </button>
         </div>

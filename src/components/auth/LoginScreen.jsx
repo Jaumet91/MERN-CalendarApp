@@ -40,87 +40,87 @@ export const LoginScreen = () => {
   };
 
   return (
-    <div className='container login-container'>
-      <div className='row'>
-        <div className='col-md-6 login-form-1'>
-          <h3>Ingreso</h3>
+    <div className="container login-container">
+      <div className="row">
+        <div className="col-md-6 login-form-1">
+          <h3>Login</h3>
           <form onSubmit={handleLogin}>
-            <div className='form-group mb-3'>
+            <div className="form-group mb-3">
               <input
-                type='text'
-                className='form-control'
-                placeholder='Correo'
-                name='lEmail'
+                type="text"
+                className="form-control"
+                placeholder="Email"
+                name="lEmail"
                 value={lEmail}
                 onChange={handleLoginInputChange}
               />
             </div>
-            <div className='form-group mb-3'>
+            <div className="form-group mb-3">
               <input
-                type='password'
-                className='form-control'
-                placeholder='Contraseña'
-                name='lPassword'
+                type="password"
+                className="form-control"
+                placeholder="Password"
+                name="lPassword"
                 value={lPassword}
-                autoComplete='off'
+                autoComplete="off"
                 onChange={handleLoginInputChange}
               />
             </div>
-            <div className='form-group mb-3'>
-              <input type='submit' className='btnSubmit' value='Login' />
+            <div className="form-group mb-3">
+              <input type="submit" className="btnSubmit" value="Login" />
             </div>
           </form>
         </div>
 
-        <div className='col-md-6 login-form-2'>
-          <h3>Registro</h3>
+        <div className="col-md-6 login-form-2">
+          <h3>Register</h3>
           <form onSubmit={handleRegister}>
-            <div className='form-group mb-3'>
+            <div className="form-group mb-3">
               <input
-                type='text'
-                className='form-control'
-                placeholder='Nombre'
-                name='rName'
+                type="text"
+                className="form-control"
+                placeholder="Name"
+                name="rName"
                 value={rName}
                 onChange={handleRegisterInputChange}
               />
             </div>
-            <div className='form-group mb-3'>
+            <div className="form-group mb-3">
               <input
-                type='email'
-                className='form-control'
-                placeholder='Correo'
-                name='rEmail'
+                type="email"
+                className="form-control"
+                placeholder="Email"
+                name="rEmail"
                 value={rEmail}
                 onChange={handleRegisterInputChange}
               />
             </div>
-            <div className='form-group mb-3'>
+            <div className="form-group mb-3">
               <input
-                type='password'
-                className='form-control'
-                placeholder='Contraseña'
-                name='rPassword1'
+                type="password"
+                className="form-control"
+                placeholder="Password"
+                name="rPassword1"
                 value={rPassword1}
-                autoComplete='off'
+                autoComplete="off"
                 onChange={handleRegisterInputChange}
               />
             </div>
 
-            <div className='form-group mb-3'>
+            <div className="form-group mb-3">
               <input
-                type='password'
-                className='form-control'
-                placeholder='Repita la contraseña'
-                name='rPassword2'
+                type="password"
+                className="form-control"
+                placeholder="Confirm Password"
+                name="rPassword2"
                 value={rPassword2}
-                autoComplete='off'
+                autoComplete="off"
                 onChange={handleRegisterInputChange}
               />
             </div>
 
-            <div className='form-group mb-3'>
-              <input type='submit' className='btnSubmit' value='Crear cuenta' />
+            <div className="form-group mb-3">
+              <input type="submit" className="btnSubmit" value="Register" />
             </div>
           </form>
         </div>

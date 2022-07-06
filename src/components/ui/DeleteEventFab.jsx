@@ -9,9 +9,9 @@ export const DeleteEventFab = () => {
   };
 
   return (
-    <button className='btn btn-danger fab-danger' onClick={handleDelete}>
-      <i className='fas fa-trash'></i>
-      <span> Borrar evento</span>
+    <button className="btn btn-danger fab-danger" onClick={handleDelete}>
+      <i className="fas fa-trash"></i>
+      <span> Delete event</span>
     </button>
   );
 };

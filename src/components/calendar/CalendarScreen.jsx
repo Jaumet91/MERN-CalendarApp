@@ -29,7 +29,7 @@ export const CalendarScreen = () => {
   const { uid } = useSelector((state) => state.auth);
 
   const [lastView, setLastView] = useState(
-    localStorage.getItem('lastView') || 'month'
+    localStorage.getItem('lastView') || 'month',
   );
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export const CalendarScreen = () => {
     dispatch(eventClearActiveEvent());
   };
 
-  const eventStyleGetter = (event, start, end, isSelected) => {
+  const eventStyleGetter = (event) => {
     const style = {
       backgroundColor: uid === event.user._id ? '#367cf7' : '#465660',
       borderRadius: '0px',
@@ -68,13 +68,13 @@ export const CalendarScreen = () => {
   };
 
   return (
-    <div className='calendar-screen'>
+    <div className="calendar-screen">
       <Navbar />
       <Calendar
         localizer={localizer}
         events={events}
-        startAccessor='start'
-        endAccessor='end'
+        startAccessor="start"
+        endAccessor="end"
         messages={messages}
         eventPropGetter={eventStyleGetter}
         onDoubleClickEvent={onDoubleClick}
